@@ -206,7 +206,9 @@ tl3.from("#card1-inner-image2", {duration:.5, x:"500%"});
 tl3.from("#card1-inner-image3", {duration:.5, x:"500%"});
 
 
+let ulHeight = document.querySelector(".card1-inner-ul").offsetHeight;
+console.log(ulHeight);
 var tl2 = gsap.timeline();
-tl2.to(["#card1-inner-ul-highlighter"], {y:"+=14.5%", duration: 3});
-tl2.to(["#card1-inner-ul-highlighter"], {y:"+=18%", duration: 3});
+tl2.to(["#card1-inner-ul-highlighter"], {y: ulHeight * .4, duration: 3});
+tl2.to(["#card1-inner-ul-highlighter"], {y:ulHeight * .75, duration: 3});
 

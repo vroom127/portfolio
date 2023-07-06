@@ -238,20 +238,22 @@ h2{
 .card1-inner-content-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 40%;
+  place-content: center;
 
 }
 .card1-inner-ul{
   padding-left: 2rem;
-  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 2rem;
   width: 26.3vw;
   font-size: var(--FSS);
   font-family: var(--FFinformal);
   line-height: 2.2rem;
   position:relative;
+  height:85%;
 
 }
 
@@ -263,13 +265,12 @@ h2{
 }
 #card1-inner-ul-highlighter{
   width:100%;
-  height: 2.5vw;
+  height: 8%;
   background-color: var(--REDCOL);
   border-radius: 15px;
   position:absolute;
   top:0;
   left:0;
-  margin-top: 1.25rem;
   z-index: -9999;
   opacity: 70%;
 }
@@ -453,7 +454,7 @@ li::marker{
   right: 4%;
   bottom: 4rem;
   opacity: 0;
-  transition: opacity 1s ease;
+/*   transition: opacity 1s ease; */
   z-index: 9999;
 }
 .footer-container{
@@ -479,9 +480,7 @@ li::marker{
   font-family: var(--FFinformal);
   padding-left: .5rem;
 }
-.footer-icon{
 
-}
 /* ||VERSIONS CSS  */
 
 .h-scroll-container{
