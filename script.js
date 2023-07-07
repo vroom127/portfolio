@@ -176,7 +176,7 @@ upBtn.onclick = function(){
 };
 
 //Adding Scroll triggers
-ScrollTrigger.create({
+/* ScrollTrigger.create({
   trigger: "#card0",
   start: "30vw top", 
   end: "bottom bottom",
@@ -184,7 +184,7 @@ ScrollTrigger.create({
   pin: ".textblock1"
 });
 
-
+ 
 gsap.to("#card0-meinrocket", {
   duration: 10,
   y:"-100vh",
@@ -194,6 +194,7 @@ gsap.to("#card0-meinrocket", {
     scrub:true
   }
 });
+*/
 
 var tl = gsap.timeline();
 var tl3 = gsap.timeline();
@@ -206,9 +207,20 @@ tl3.from("#card1-inner-image2", {duration:.5, x:"500%"});
 tl3.from("#card1-inner-image3", {duration:.5, x:"500%"});
 
 
+/* movse essay speech flask */
+// get height of list container
 let ulHeight = document.querySelector(".card1-inner-ul").offsetHeight;
-console.log(ulHeight);
+// get height of items
 var tl2 = gsap.timeline();
-tl2.to(["#card1-inner-ul-highlighter"], {y: ulHeight * .4, duration: 3});
-tl2.to(["#card1-inner-ul-highlighter"], {y:ulHeight * .75, duration: 3});
+let liHeight1 = document.querySelector(".card1-inner-list-item:nth-child(1)").offsetHeight;
+let liHeight2 = document.querySelector(".card1-inner-list-item:nth-child(2)").offsetHeight;
+let liHeight3 = document.querySelector(".card1-inner-list-item:nth-child(3)").offsetHeight;
+// get height of padding
+let liPadding = (ulHeight - (liHeight1 +liHeight2 + liHeight3))/2;
+//do animations
+tl2.to(["#card1-inner-ul-highlighter"], {y: liHeight1 + liPadding, duration: 3});
+tl2.to(["#card1-inner-ul-highlighter"], {y: "+="+(liHeight2 + liPadding), duration: 3, delay: 1});
+
+//tl2.to(["#card1-inner-ul-highlighter"], {y: ulHeight * .33, duration: 3});
+//tl2.to(["#card1-inner-ul-highlighter"], {y:ulHeight * .66, duration: 3});
 
